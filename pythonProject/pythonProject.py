@@ -16,20 +16,21 @@ class State(rx.State):
 
 
 def index() -> rx.Component:
-    return rx.hstack(
-        rx.button(
-            "Decrement",
-            color_scheme="red",
-            on_click=State.decrement,
-        ),
-        rx.heading(State.count, font_size="2em"),
-        rx.button(
-            "Increment",
-            color_scheme="blue",
-            on_click=State.increment,
-        ),
-        spacing="4",
-    )
+    return rx.center(
+        rx.hstack(
+            rx.button(
+                "Decrement",
+                color_scheme="red",
+                on_click=State.decrement,
+            ),
+            rx.heading(State.count, font_size="2em"),
+            rx.button(
+                "Increment",
+                color_scheme="blue",
+                on_click=State.increment,
+            ),
+            spacing="4",
+        ))
 
 
 app = rx.App()
